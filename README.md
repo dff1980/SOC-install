@@ -11,6 +11,7 @@ Adding Mandatory Repositories
 Download **SUSE-OPENSTACK-CLOUD-8-x86_64-GM-DVD1.iso**
 start from the download directory `repo-cp.sh`
 
+Place a copy of the SUSE Linux Enterprise Server 12 SP3 .iso in the ardana home directory, var/lib/ardana, and rename it to `sles12sp3.iso`.
 
 ## Repository Locations
 The following tables show the locations of all repositories that can be used for SUSE OpenStack Cloud.
