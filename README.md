@@ -13,6 +13,7 @@ start from the download directory `repo-cp.sh`
 
 ##Repository Locations
 The following tables show the locations of all repositories that can be used for SUSE OpenStack Cloud.
+
 ###SMT Repositories Hosted on the Administration Server
 |Repository|Directory|
 |----------|---------|
