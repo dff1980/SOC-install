@@ -8,7 +8,7 @@ Adding Mandatory Repositories
 |----------|---------|
 |SUSE OpenStack Cloud 8 DVD #1|/srv/www/suse-12.3/x86_64/repos/Cloud|
 
-Download **SUSE-OPENSTACK-CLOUD-8-x86_64-GM-DVD1**
+Download **SUSE-OPENSTACK-CLOUD-8-x86_64-GM-DVD1.iso**
 start from the download directory `repo-cp.sh`
 
 
