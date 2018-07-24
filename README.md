@@ -12,10 +12,10 @@ Download **SUSE-OPENSTACK-CLOUD-8-x86_64-GM-DVD1.iso**
 start from the download directory `repo-cp.sh`
 
 
-##Repository Locations
+## Repository Locations
 The following tables show the locations of all repositories that can be used for SUSE OpenStack Cloud.
 
-###SMT Repositories Hosted on the Administration Server
+### SMT Repositories Hosted on the Administration Server
 |Repository|Directory|
 |----------|---------|
 |Mandatory Repositories|
@@ -24,7 +24,7 @@ The following tables show the locations of all repositories that can be used for
 |SUSE-OpenStack-Cloud-8-Pool|/srv/www/htdocs/repo/SUSE/Products/OpenStack-Cloud/8/x86_64/product/|
 |SUSE-OpenStack-Cloud-8-Updates|/srv/www/htdocs/repo/SUSE/Updates/OpenStack-Cloud/8/x86_64/update/|
 
-###SUSE Manager Repositories (Channels)
+### SUSE Manager Repositories (Channels)
 |Repository|URL|
 |----------|---|
 |Mandatory Repositories|
@@ -32,7 +32,7 @@ The following tables show the locations of all repositories that can be used for
 |SUSE-OpenStack-Cloud-8-Pool|http://manager.example.com/ks/dist/child/suse-openstack-cloud-8-pool-x86_64/sles12-sp3-x86_64/|
 |SUSE-OpenStack-Cloud-8-Updates|http://manager.example.com/ks/dist/child/suse-openstack-cloud-8-updates-x86_64/sles12-sp3-x86_64/|
 
-###Repository Locations on the Cloud Lifecycle Manager server
+### Repository Locations on the Cloud Lifecycle Manager server
 The following table shows the required repository locations to use when manually copying, synchronizing, or mounting the repositories.
 |Channel|Directory on the Administration Server|
 |-------|--------------------------------------|
