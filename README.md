@@ -41,4 +41,4 @@ The following table shows the required repository locations to use when manually
 |SLES12-SP3-Pool|/srv/www/suse-12.3/x86_64/repos/SLES12-SP3-Pool/|
 |SLES12-SP3-Updates|/srv/www/suse-12.3/x86_64/repos/SLES12-SP3-Updates/|
 |SUSE-OpenStack-Cloud-8-Pool|/srv/www/suse-12.3/x86_64/repos/SUSE-OpenStack-Cloud-8-Pool/|
-|SUSE-OpenStack-Cloud-8-Updates|/srv/www/suse-12.3/x86_64/repos/SUSE-OpenStack-Cloud-8-Updates|
+|SUSE-OpenStack-Cloud-8-Updates|/srv/www/suse-12.3/x86_64/repos/SUSE-OpenStack-Cloud-8-Updates/|
