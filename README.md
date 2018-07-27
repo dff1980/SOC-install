@@ -11,6 +11,14 @@ Adding Mandatory Repositories
 Download **SUSE-OPENSTACK-CLOUD-8-x86_64-GM-DVD1.iso**
 start from the download directory `repo-cp.sh`
 
+## Users
+Creating a User "cloud"
+visudo as user root and add the following line to the end of the file:
+`cloud ALL = (root) NOPASSWD:ALL`
+Set the password for the user ardana:
+`sudo passwd ardana`
+Become the user ardana:
+`su - ardana`
 Place a copy of the SUSE Linux Enterprise Server 12 SP3 .iso in the ardana home directory, var/lib/ardana, and rename it to `sles12sp3.iso`.
 
 ## Repository Locations
@@ -18,7 +26,7 @@ The following tables show the locations of all repositories that can be used for
 
 ### SMT Repositories Hosted on the Administration Server
 |Repository|Directory|
-|----------|---------|
+`----------|---------|`
 |Mandatory Repositories||
 |SLES12-SP3-Pool|/srv/www/htdocs/repo/SUSE/Products/SLE-SERVER/12-SP3/x86_64/product/|
 |SLES12-SP3-Updates|/srv/www/htdocs/repo/SUSE/Updates/SLE-SERVER/12-SP3/x86_64/update/|
