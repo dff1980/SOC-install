@@ -32,7 +32,7 @@ The following tables show the locations of all repositories that can be used for
 ### SMT Repositories Hosted on the Administration Server
 
 |Repository|Directory|
-`----------|---------|`
+|----------|---------|
 |Mandatory Repositories||
 |SLES12-SP3-Pool|/srv/www/htdocs/repo/SUSE/Products/SLE-SERVER/12-SP3/x86_64/product/|
 |SLES12-SP3-Updates|/srv/www/htdocs/repo/SUSE/Updates/SLE-SERVER/12-SP3/x86_64/update/|
