@@ -14,8 +14,11 @@ start from the download directory `repo-cp.sh`
 ## Users
 Creating a User "cloud"
 visudo as user root and add the following line to the end of the file:
+
 --`cloud ALL = (root) NOPASSWD:ALL`
+
 ++`cloud,ardana ALL = (root) NOPASSWD:ALL`
+
 Set the password for the user ardana:
 `sudo passwd ardana`
 Become the user ardana:
@@ -27,6 +30,7 @@ Place a copy of the SUSE Linux Enterprise Server 12 SP3 .iso in the ardana home 
 The following tables show the locations of all repositories that can be used for SUSE OpenStack Cloud.
 
 ### SMT Repositories Hosted on the Administration Server
+
 |Repository|Directory|
 `----------|---------|`
 |Mandatory Repositories||
@@ -36,6 +40,7 @@ The following tables show the locations of all repositories that can be used for
 |SUSE-OpenStack-Cloud-8-Updates|/srv/www/htdocs/repo/SUSE/Updates/OpenStack-Cloud/8/x86_64/update/|
 
 ### SUSE Manager Repositories (Channels)
+
 |Repository|URL|
 |----------|---|
 |Mandatory Repositories||
