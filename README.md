@@ -32,6 +32,8 @@ git add -A
 git commit -m "My config or other commit message"
 [Using Git for Configuration Management](https://www.suse.com/documentation/suse-openstack-cloud-8/book_install/data/updating-configuration-including-default-config.html)
 
+Создать Updates-test репозитории?
+
 ## Repository Locations
 The following tables show the locations of all repositories that can be used for SUSE OpenStack Cloud.
 
