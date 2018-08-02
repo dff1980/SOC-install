@@ -26,6 +26,11 @@ Become the user ardana:
 Place a copy of the SUSE Linux Enterprise Server 12 SP3 .iso in the ardana home directory, var/lib/ardana, and rename it to `sles12sp3.iso`.
 `ARDANA_INIT_AUTO=1 /usr/bin/ardana-init`
 
+## GIT
+git status
+git add -A
+git commit -m "My config or other commit message"
+
 ## Repository Locations
 The following tables show the locations of all repositories that can be used for SUSE OpenStack Cloud.
 
