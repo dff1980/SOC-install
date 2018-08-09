@@ -37,6 +37,8 @@ git commit -m "My config or other commit message"`
 ## Determining Your User Credentials
 `grep "pwd" ~/scratch/ansible/next/ardana/ansible/group_vars/*`
 `sed -n '/cp_tempest_data:/,/cp_tempest/p' ~/scratch/ansible/next/ardana/ansible/group_vars/all`
+`. ~\keystone.osrc`
+`. ~\service.osrc`
 
 ## Repository Locations
 The following tables show the locations of all repositories that can be used for SUSE OpenStack Cloud.
