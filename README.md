@@ -27,19 +27,19 @@ Place a copy of the SUSE Linux Enterprise Server 12 SP3 .iso in the ardana home 
 `ARDANA_INIT_AUTO=1 /usr/bin/ardana-init`
 
 ## GIT
-git status
+`git status
 git add -A
-git commit -m "My config or other commit message"
+git commit -m "My config or other commit message"`
 [Using Git for Configuration Management](https://www.suse.com/documentation/suse-openstack-cloud-8/book_install/data/updating-configuration-including-default-config.html)
 
-Создать Updates-test репозитории?
+?Создать Updates-test репозитории?
 
 ## Determining Your User Credentials
-~/scratch/ansible/next/ardana/ansible/group_vars/
+`~/scratch/ansible/next/ardana/ansible/group_vars/`
 ### Administrator
-grep keystone_admin_pwd entry-scale-kvm-control-plane-1
+`grep keystone_admin_pwd entry-scale-kvm-control-plane-1`
 ### Demo
-grep keystone_demo_pwd entry-scale-kvm-control-plane-1
+`grep keystone_demo_pwd entry-scale-kvm-control-plane-1`
 
 ## Repository Locations
 The following tables show the locations of all repositories that can be used for SUSE OpenStack Cloud.
