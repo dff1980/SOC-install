@@ -34,6 +34,13 @@ git commit -m "My config or other commit message"
 
 Создать Updates-test репозитории?
 
+## Determining Your User Credentials
+~/scratch/ansible/next/ardana/ansible/group_vars/
+### Administrator
+grep keystone_admin_pwd entry-scale-kvm-control-plane-1
+### Demo
+grep keystone_demo_pwd entry-scale-kvm-control-plane-1
+
 ## Repository Locations
 The following tables show the locations of all repositories that can be used for SUSE OpenStack Cloud.
 
