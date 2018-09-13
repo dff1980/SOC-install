@@ -74,9 +74,8 @@ The following table shows the required repository locations to use when manually
 |SUSE-OpenStack-Cloud-8-Updates|/srv/www/suse-12.3/x86_64/repos/SUSE-OpenStack-Cloud-8-Updates/|
 
 ## Update
-cd ~/scratch/ansible/next/ardana/ansible
-
-ansible-playbook -i hosts/verb_hosts ardana-update-status.yml -e zypper_update_include_reboot_patches=true -e skip_single_host_checks=true
+`cd ~/scratch/ansible/next/ardana/ansible
+ansible-playbook -i hosts/verb_hosts ardana-update-status.yml -e zypper_update_include_reboot_patches=true -e skip_single_host_checks=true`
 
 ## Doc
 http://docserv.nue.suse.com/documents/#SUSE_OpenStack_Cloud_8
