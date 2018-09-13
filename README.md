@@ -75,8 +75,8 @@ The following table shows the required repository locations to use when manually
 
 ## Update
 
-`cd ~/scratch/ansible/next/ardana/ansible
-ansible-playbook -i hosts/verb_hosts ardana-update-status.yml -e zypper_update_include_reboot_patches=true -e skip_single_host_checks=true`
+`cd ~/scratch/ansible/next/ardana/ansible`
+`ansible-playbook -i hosts/verb_hosts ardana-update-status.yml -e zypper_update_include_reboot_patches=true -e skip_single_host_checks=true`
 
 ## Doc
 http://docserv.nue.suse.com/documents/#SUSE_OpenStack_Cloud_8
