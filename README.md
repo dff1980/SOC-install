@@ -62,6 +62,9 @@ The following tables show the locations of all repositories that can be used for
 |SUSE-OpenStack-Cloud-8-Pool|http://manager.example.com/ks/dist/child/suse-openstack-cloud-8-pool-x86_64/sles12-sp3-x86_64/|
 |SUSE-OpenStack-Cloud-8-Updates|http://manager.example.com/ks/dist/child/suse-openstack-cloud-8-updates-x86_64/sles12-sp3-x86_64/|
 
+### Other
+https://yadi.sk/d/VL7iOBOZNF7u5w
+
 ### Repository Locations on the Cloud Lifecycle Manager server
 The following table shows the required repository locations to use when manually copying, synchronizing, or mounting the repositories.
 
