@@ -83,3 +83,6 @@ The following table shows the required repository locations to use when manually
 
 ## Doc
 http://docserv.nue.suse.com/documents/#SUSE_OpenStack_Cloud_8
+
+https://downloads.hpe.com/pub/softlib2/software1/pubsw-linux/p1857046646/v146094/ssacli-3.30-14.0.x86_64.rpm
+https://downloads.hpe.com/pub/softlib2/software1/pubsw-linux/p219801368/v146098/ssaducli-3.30-14.0.x86_64.rpm
