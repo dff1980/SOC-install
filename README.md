@@ -101,12 +101,12 @@ ansible-playbook -i hosts/localhost ready-deployment.yml`
 
 Redeploy Cobbler with New Node Info
 
-**Redeploy Cobbler
+-Redeploy Cobbler
 
 `cd ~/openstack/ardana/ansible/
 ansible-playbook -i hosts/localhost cobbler-deploy.yml`
 
-**Get list of Cobbler Nodes (so we know the node's name):
+-Get list of Cobbler Nodes (so we know the node's name):
 
 `sudo cobbler list`
 
@@ -117,12 +117,12 @@ ansible-playbook -i hosts/localhost bm-reimage.yml -e nodelist=NODE_NAME`
 
 Run the site Playbook for the New Node
 
-**Determine the node's hostname
+-Determine the node's hostname
 
 `cd ~/scratch/ansible/next/ardana/ansible/
 grep NODE_IP_ADDR generated_file/etc/hosts | awk '{ print $2 }'`
 
-**Run site playbook for that node:
+-Run site playbook for that node:
 
 `ansible-playbook -i hosts/verb_hosts site.yml --limit NODE_NAME`
 
