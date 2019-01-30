@@ -81,6 +81,35 @@ The following table shows the required repository locations to use when manually
 `cd ~/scratch/ansible/next/ardana/ansible`
 `ansible-playbook -i hosts/verb_hosts ardana-update-status.yml -e zypper_update_include_reboot_patches=true -e skip_single_host_checks=true`
 
+## Add Node
+
+Commit Configuration to Git
+`cd ~/openstack
+git add -A
+git commit -m "<description of changes>"`
+Run the Configuration Processor
+`cd ~/openstack/ardana/ansible/
+ansible-playbook -i hosts/localhost config-processor-run.yml`
+Run ready-deployment Playbook
+`cd ~/openstack/ardana/ansible/
+ansible-playbook -i hosts/localhost ready-deployment.yml`
+Redeploy Cobbler with New Node Info
+**Redeploy Cobbler
+`cd ~/openstack/ardana/ansible/
+ansible-playbook -i hosts/localhost cobbler-deploy.yml`
+**Get list of Cobbler Nodes (so we know the node's name):
+`sudo cobbler list`
+(Re)Image the New Node
+`cd ~/openstack/ardana/ansible/
+ansible-playbook -i hosts/localhost bm-reimage.yml -e nodelist=NODE_NAME`
+Run the site Playbook for the New Node
+**Determine the node's hostname
+`cd ~/scratch/ansible/next/ardana/ansible/
+grep NODE_IP_ADDR generated_file/etc/hosts | awk '{ print $2 }'`
+**Run site playbook for that node:
+`ansible-playbook -i hosts/verb_hosts site.yml --limit NODE_NAME`
+
+
 ## Doc
 http://docserv.nue.suse.com/documents/#SUSE_OpenStack_Cloud_8
 
