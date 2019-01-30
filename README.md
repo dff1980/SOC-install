@@ -83,49 +83,48 @@ The following table shows the required repository locations to use when manually
 
 ## Add Node
 
-Commit Configuration to Git
+- Commit Configuration to Git
 
 `cd ~/openstack
 git add -A
 git commit -m "<description of changes>"`
 
-Run the Configuration Processor
+- Run the Configuration Processor
 
 `cd ~/openstack/ardana/ansible/
 ansible-playbook -i hosts/localhost config-processor-run.yml`
 
-Run ready-deployment Playbook
+- Run ready-deployment Playbook
 
 `cd ~/openstack/ardana/ansible/
 ansible-playbook -i hosts/localhost ready-deployment.yml`
 
-Redeploy Cobbler with New Node Info
+- Redeploy Cobbler with New Node Info
 
-- Redeploy Cobbler
+  - Redeploy Cobbler
 
-`cd ~/openstack/ardana/ansible/
-ansible-playbook -i hosts/localhost cobbler-deploy.yml`
+  `cd ~/openstack/ardana/ansible/
+   ansible-playbook -i hosts/localhost cobbler-deploy.yml`
 
-- Get list of Cobbler Nodes (so we know the node's name):
+  - Get list of Cobbler Nodes (so we know the node's name):
 
-`sudo cobbler list`
+  `sudo cobbler list`
 
-(Re)Image the New Node
+- (Re)Image the New Node
 
 `cd ~/openstack/ardana/ansible/
 ansible-playbook -i hosts/localhost bm-reimage.yml -e nodelist=NODE_NAME`
 
-Run the site Playbook for the New Node
+- Run the site Playbook for the New Node
 
-- Determine the node's hostname
+  - Determine the node's hostname
 
-`cd ~/scratch/ansible/next/ardana/ansible/
-grep NODE_IP_ADDR generated_file/etc/hosts | awk '{ print $2 }'`
+  `cd ~/scratch/ansible/next/ardana/ansible/
+  grep NODE_IP_ADDR generated_file/etc/hosts | awk '{ print $2 }'`
 
-- Run site playbook for that node:
+  - Run site playbook for that node:
 
-`ansible-playbook -i hosts/verb_hosts site.yml --limit NODE_NAME`
-
+  `ansible-playbook -i hosts/verb_hosts site.yml --limit NODE_NAME`
 
 ## Doc
 http://docserv.nue.suse.com/documents/#SUSE_OpenStack_Cloud_8
