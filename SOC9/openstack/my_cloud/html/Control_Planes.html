@@ -1,0 +1,533 @@
+<html>
+
+<h1>Cloud: entry-scale-kvm</h1>
+<head><link href="ardana.css" type="text/css" rel="stylesheet"></head>
+<h2><a href="Control_Planes.html">Control Plane View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Regions.html">Region View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Services.html">Service View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Networks.html">Network View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Server_View.html">Server View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Server_Groups.html">Server Groups View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h2>
+<br>
+<br>
+<a name="#control-plane-1"></a>
+<h2>control-plane-1</h2>
+<table>
+<tr><td class="title"><td colspan="2" align="center"><b>Clusters</b></td><td colspan="1" align="center"><b>Resources</b></td><td colspan="2" align="center"><b>Load Balancers</b></td></tr>
+<tr><td class="title"><td align="center" valign="top"><b>cluster0</b><br><br><br><br><br><br><br><br><br><br><span title="Components:
+    logging-producer
+    logging-rotate
+
+Regions:
+    region1
+">logging</span><br><br><br><span title="Components:
+    monasca-agent
+
+Regions:
+    region1
+">monasca</span><br><br><br><br><br><br><br><span title="Components:
+    ardana-ca
+    stunnel
+    ntp-server
+
+Regions:
+    region1
+">foundation</span><br><br><span title="Components:
+    lifecycle-manager
+    ardana-service
+    lifecycle-manager-target
+
+Regions:
+    region1
+">ardana</span><br></td><td align="center" valign="top"><b>cluster1</b><br><br><span title="Components:
+    barbican-api
+    barbican-worker
+
+Regions:
+    region1
+">barbican</span><br><span title="Components:
+    ceilometer-common
+    ceilometer-agent-notification
+    ceilometer-polling
+
+Regions:
+    region1
+">ceilometer</span><br><span title="Components:
+    cinder-backup
+    cinder-api
+    cinder-volume
+    cinder-scheduler
+
+Regions:
+    region1
+">cinder</span><br><span title="Components:
+    designate-producer
+    designate-mdns
+    designate-api
+    designate-central
+    designate-worker
+
+Regions:
+    region1
+">designate</span><br><span title="Components:
+    glance-api
+
+Regions:
+    region1
+">glance</span><br><span title="Components:
+    heat-api-cfn
+    heat-api
+    heat-engine
+
+Regions:
+    region1
+">heat</span><br><span title="Components:
+    horizon
+
+Regions:
+    region1
+">horizon</span><br><span title="Components:
+    keystone-api
+
+Regions:
+    region1
+">keystone</span><br><span title="Components:
+    logging-rotate
+    logging-producer
+    logging-server
+    logging-api
+
+Regions:
+    region1
+">logging</span><br><span title="Components:
+    magnum-api
+    magnum-conductor
+
+Regions:
+    region1
+">magnum</span><br><span title="Components:
+    manila-api
+
+Regions:
+    region1
+">manila</span><br><span title="Components:
+    monasca-notifier
+    monasca-agent
+    monasca-api
+    monasca-persister
+    monasca-threshold
+    monasca-liveness-check
+    monasca-transform
+
+Regions:
+    region1
+">monasca</span><br><span title="Components:
+    neutron-ml2-plugin
+    neutron-openvswitch-agent
+    neutron-dhcp-agent
+    neutron-server
+    neutron-metadata-agent
+    neutron-vpn-agent
+
+Regions:
+    region1
+">neutron</span><br><span title="Components:
+    nova-api
+    nova-placement-api
+    nova-novncproxy
+    nova-conductor
+    nova-scheduler
+    nova-metadata
+
+Regions:
+    region1
+">nova</span><br><span title="Components:
+    octavia-health-manager
+    octavia-api
+
+Regions:
+    region1
+">octavia</span><br><span title="Components:
+    ops-console-web
+
+Regions:
+    region1
+">operations</span><br><span title="Components:
+    tempest
+
+Regions:
+    region1
+">tempest</span><br><br><span title="Components:
+    zookeeper
+    stunnel
+    mysql
+    cassandra
+    ip-cluster
+    bind
+    bind-ext
+    apache2
+    storm
+    memcached
+    ntp-server
+    kafka
+    rabbitmq
+    spark
+
+Regions:
+    region1
+">foundation</span><br><span title="Components:
+    barbican-client
+    designate-client
+    manila-client
+    keystone-client
+    magnum-client
+    heat-client
+    octavia-client
+    ceilometer-client
+    monasca-client
+    neutron-client
+    nova-client
+    cinder-client
+    openstack-client
+    glance-client
+
+Regions:
+    region1
+">clients</span><br><span title="Components:
+    lifecycle-manager-target
+
+Regions:
+    region1
+">ardana</span><br></td><td align="center" valign="top"><b>compute</b><br><br><br><br><br><br><br><br><br><br><span title="Components:
+    logging-rotate
+    logging-producer
+
+Regions:
+    region1
+">logging</span><br><br><br><span title="Components:
+    monasca-agent
+
+Regions:
+    region1
+">monasca</span><br><span title="Components:
+    neutron-openvswitch-agent
+    neutron-metadata-agent
+    neutron-l3-agent
+
+Regions:
+    region1
+">neutron</span><br><span title="Components:
+    nova-compute
+    nova-compute-kvm
+
+Regions:
+    region1
+">nova</span><br><br><br><br><br><span title="Components:
+    stunnel
+    ntp-client
+
+Regions:
+    region1
+">foundation</span><br><br><span title="Components:
+    lifecycle-manager-target
+
+Regions:
+    region1
+">ardana</span><br></td><td align="center" valign="top"><b>extlb</b><br><br><span title="barbican-api  (9311)   TLS
+    ardana-cp1-vip-public-KEYMGR-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt   TLS
+        ardana-cp1-c1-m2-mgmt   TLS
+        ardana-cp1-c1-m3-mgmt   TLS
+
+">barbican</span><br><br><span title="cinder-api  (8776)   TLS
+    ardana-cp1-vip-public-CND-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">cinder</span><br><span title="designate-api  (9001)   TLS
+    ardana-cp1-vip-public-DES-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">designate</span><br><span title="glance-api  (9292)   TLS
+    ardana-cp1-vip-public-GLA-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">glance</span><br><span title="heat-api  (8004)   TLS
+    ardana-cp1-vip-public-HEA-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+heat-api-cfn  (8000)   TLS
+    ardana-cp1-vip-public-HEA-ACF-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">heat</span><br><span title="horizon  (443)   TLS
+    ardana-cp1-vip-public-HZN-WEB-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">horizon</span><br><span title="keystone-api  (5000)   TLS
+    ardana-cp1-vip-public-KEY-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">keystone</span><br><span title="logging-api  (5607)   TLS
+    ardana-cp1-vip-public-LOG-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">logging</span><br><span title="magnum-api  (9511)   TLS
+    ardana-cp1-vip-public-MAG-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">magnum</span><br><span title="manila-api  (8786)   TLS
+    ardana-cp1-vip-public-MNL-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">manila</span><br><span title="monasca-api  (8070)   TLS
+    ardana-cp1-vip-public-MON-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">monasca</span><br><span title="neutron-server  (9696)   TLS
+    ardana-cp1-vip-public-NEU-SVR-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">neutron</span><br><span title="nova-api  (8774)   TLS
+    ardana-cp1-vip-public-NOV-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+nova-novncproxy  (6080)   TLS
+    ardana-cp1-vip-public-NOV-VNC-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+nova-placement-api  (8780)   TLS
+    ardana-cp1-vip-public-NOV-PLC-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">nova</span><br><span title="octavia-api  (9876)   TLS
+    ardana-cp1-vip-public-OCT-API-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">octavia</span><br><span title="ops-console-web  (9095)   TLS
+    ardana-cp1-vip-public-OPS-WEB-extapi
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">operations</span><br><br><br><br><br><span title="ardana-service  (9085)   TLS
+    ardana-cp1-vip-public-ARD-SVC-extapi
+    hosts:
+        ardana-cp1-c0-m1-mgmt
+
+">ardana</span><br><br>None<br><a href="Networks.html#EXTERNAL-API-NET">10.0.1.5</a><br><br></td><td align="center" valign="top"><b>lb</b><br><br><span title="barbican-api  (9311)   TLS
+    ardana-cp1-vip-admin-KEYMGR-API-mgmt
+    ardana-cp1-vip-KEYMGR-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt   TLS
+        ardana-cp1-c1-m2-mgmt   TLS
+        ardana-cp1-c1-m3-mgmt   TLS
+
+">barbican</span><br><br><span title="cinder-api  (8776)   TLS
+    ardana-cp1-vip-admin-CND-API-mgmt
+    ardana-cp1-vip-CND-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">cinder</span><br><span title="designate-api  (9001)   TLS
+    ardana-cp1-vip-admin-DES-API-mgmt
+    ardana-cp1-vip-DES-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">designate</span><br><span title="glance-api  (9292)   TLS
+    ardana-cp1-vip-admin-GLA-API-mgmt
+    ardana-cp1-vip-GLA-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">glance</span><br><span title="heat-api  (8004)   TLS
+    ardana-cp1-vip-admin-HEA-API-mgmt
+    ardana-cp1-vip-HEA-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+heat-api-cfn  (8000)   TLS
+    ardana-cp1-vip-admin-HEA-ACF-mgmt
+    ardana-cp1-vip-HEA-ACF-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">heat</span><br><span title="horizon  (443)   TLS
+    ardana-cp1-vip-admin-HZN-WEB-mgmt
+    ardana-cp1-vip-HZN-WEB-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">horizon</span><br><span title="keystone-api  (35357)   TLS
+    ardana-cp1-vip-admin-KEY-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">keystone</span><br><span title="logging-api  (5607)   TLS
+    ardana-cp1-vip-admin-LOG-API-mgmt
+    ardana-cp1-vip-LOG-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+logging-server  (5601)   TLS
+    ardana-cp1-vip-admin-LOG-SVR-mgmt
+    ardana-cp1-vip-LOG-SVR-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">logging</span><br><span title="magnum-api  (9511)   TLS
+    ardana-cp1-vip-admin-MAG-API-mgmt
+    ardana-cp1-vip-MAG-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">magnum</span><br><span title="manila-api  (8786)   TLS
+    ardana-cp1-vip-admin-MNL-API-mgmt
+    ardana-cp1-vip-MNL-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">manila</span><br><span title="monasca-api  (8070)   TLS
+    ardana-cp1-vip-admin-MON-API-mgmt
+    ardana-cp1-vip-MON-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">monasca</span><br><span title="neutron-server  (9696)   TLS
+    ardana-cp1-vip-admin-NEU-SVR-mgmt
+    ardana-cp1-vip-NEU-SVR-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">neutron</span><br><span title="nova-api  (8774)   TLS
+    ardana-cp1-vip-admin-NOV-API-mgmt
+    ardana-cp1-vip-NOV-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+nova-metadata  (8775)
+    ardana-cp1-vip-NOV-MTD-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+nova-placement-api  (8780)   TLS
+    ardana-cp1-vip-admin-NOV-PLC-mgmt
+    ardana-cp1-vip-NOV-PLC-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">nova</span><br><span title="octavia-api  (9876)   TLS
+    ardana-cp1-vip-admin-OCT-API-mgmt
+    ardana-cp1-vip-OCT-API-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">octavia</span><br><span title="ops-console-web  (9095)   TLS
+    ardana-cp1-vip-admin-OPS-WEB-mgmt
+    ardana-cp1-vip-OPS-WEB-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">operations</span><br><br><br><span title="mysql  (3306)
+    ardana-cp1-vip-admin-FND-MDB-mgmt
+    ardana-cp1-vip-FND-MDB-mgmt
+    hosts:
+        ardana-cp1-c1-m1-mgmt
+        ardana-cp1-c1-m2-mgmt
+        ardana-cp1-c1-m3-mgmt
+
+">foundation</span><br><br><span title="ardana-service  (9085)   TLS
+    ardana-cp1-vip-admin-ARD-SVC-mgmt
+    ardana-cp1-vip-ARD-SVC-mgmt
+    hosts:
+        ardana-cp1-c0-m1-mgmt
+
+">ardana</span><br><br><br><a href="Networks.html#MANAGEMENT-NET">192.168.16.1</a><br><br></td></tr>
+<tr><td>AZ1</td><td align="center" valign="top"><a href="Servers/lifecycle-manager.html">  ardana-cp1-c0-m1-mgmt</a><br></td><td align="center" valign="top"><a href="Servers/controller1.html">  ardana-cp1-c1-m1-mgmt</a><br></td><td align="center" valign="top"><a href="Servers/compute1.html">  ardana-cp1-comp0001-mgmt</a><br><a href="Servers/compute2.html">  ardana-cp1-comp0002-mgmt</a><br><a href="Servers/compute3.html">  ardana-cp1-comp0003-mgmt</a><br></td></tr>
+<tr><td>AZ2</td><td align="center" valign="top"></td><td align="center" valign="top"><a href="Servers/controller2.html">  ardana-cp1-c1-m2-mgmt</a><br></td><td align="center" valign="top"></td></tr>
+<tr><td>AZ3</td><td align="center" valign="top"></td><td align="center" valign="top"><a href="Servers/controller3.html">  ardana-cp1-c1-m3-mgmt</a><br></td><td align="center" valign="top"></td></tr>
+</table>
+<br>
+<br>
+</html>

@@ -1,0 +1,240 @@
+'dns': !!null 'null'
+'firewall':
+    'enable': !!bool 'true'
+    'managed_networks':
+    -   'interface': 'hed1'
+        'name': 'MANAGEMENT'
+    'rules':
+        '192.168.16.10':
+        -   'chain': 'MANAGEMENT'
+            'component': 'ssh'
+            'port-range-max': !!int '22'
+            'port-range-min': !!int '22'
+            'protocol': 'tcp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'ardana-service'
+            'port-range-max': '9085'
+            'port-range-min': '9085'
+            'protocol': 'tcp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'lifecycle-manager'
+            'port-range-max': !!int '22'
+            'port-range-min': !!int '22'
+            'protocol': 'tcp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'lifecycle-manager'
+            'port-range-max': !!int '67'
+            'port-range-min': !!int '67'
+            'protocol': 'udp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'lifecycle-manager'
+            'port-range-max': !!int '68'
+            'port-range-min': !!int '68'
+            'protocol': 'udp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'lifecycle-manager'
+            'port-range-max': !!int '69'
+            'port-range-min': !!int '69'
+            'protocol': 'udp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'lifecycle-manager'
+            'port-range-max': !!int '79'
+            'port-range-min': !!int '79'
+            'protocol': 'tcp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'ntp-server'
+            'port-range-max': '123'
+            'port-range-min': '123'
+            'protocol': 'udp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'monasca-agent'
+            'port-range-max': '17123'
+            'port-range-min': '17123'
+            'protocol': 'tcp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'monasca-agent'
+            'port-range-max': '8125'
+            'port-range-min': '8125'
+            'protocol': 'udp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'monasca-agent'
+            'port-range-max': '0'
+            'port-range-min': '8'
+            'protocol': 'icmp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'lifecycle-manager-target'
+            'port-range-max': !!int '22'
+            'port-range-min': !!int '22'
+            'protocol': 'tcp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'lifecycle-manager-target'
+            'port-range-max': !!int '5099'
+            'port-range-min': !!int '5099'
+            'protocol': 'tcp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+        -   'chain': 'MANAGEMENT'
+            'component': 'user-PING'
+            'port-range-max': !!int '0'
+            'port-range-min': !!int '8'
+            'protocol': 'icmp'
+            'remote-ip-prefix': '0.0.0.0/0'
+            'type': 'allow'
+    'settings':
+        'enable': !!bool 'true'
+        'logging': !!bool 'true'
+'host':
+    'bind':
+        'ARD_SVC':
+            'admin':
+                'ip_address': '192.168.16.10'
+                'port': '9085'
+                'tls': !!bool 'false'
+            'internal':
+                'ip_address': '192.168.16.10'
+                'port': '9085'
+                'tls': !!bool 'false'
+            'public':
+                'ip_address': '192.168.16.10'
+                'port': '9085'
+                'tls': !!bool 'false'
+        'MON_AGN':
+            'agent':
+                'ip_address': '192.168.16.10'
+                'port': '17123'
+                'tls': !!bool 'false'
+            'ping':
+                'ip_address': '192.168.16.10'
+                'port': '8:0'
+                'tls': !!bool 'false'
+            'statsd':
+                'ip_address': '192.168.16.10'
+                'port': '8125'
+                'tls': !!bool 'false'
+        'NTP_SVR':
+            'internal':
+                'ip_address': '192.168.16.10'
+                'port': '123'
+                'tls': !!bool 'false'
+        'OPS_LM':
+            'bootp':
+                'ip_address': '192.168.16.10'
+                'port': !!int '67'
+                'tls': !!bool 'false'
+            'dhcp':
+                'ip_address': '192.168.16.10'
+                'port': !!int '68'
+                'tls': !!bool 'false'
+            'internal':
+                'ip_address': '192.168.16.10'
+                'port': !!int '79'
+                'tls': !!bool 'false'
+            'ssh':
+                'ip_address': '192.168.16.10'
+                'port': !!int '22'
+                'tls': !!bool 'false'
+            'tftp':
+                'ip_address': '192.168.16.10'
+                'port': !!int '69'
+                'tls': !!bool 'false'
+        'OPS_LMTGT':
+            'ansible-accelerate':
+                'ip_address': '192.168.16.10'
+                'port': !!int '5099'
+                'tls': !!bool 'false'
+            'ssh':
+                'ip_address': '192.168.16.10'
+                'port': !!int '22'
+                'tls': !!bool 'false'
+    'cpu_assignments': {}
+    'failure_zone': 'AZ1'
+    'fcoe_interfaces': []
+    'my_ardana_ansible_name': 'ardana-cp1-c0-m1'
+    'my_device_groups': {}
+    'my_dimensions':
+        'cloud_name': 'entry-scale-kvm'
+        'cluster': 'cluster0'
+        'control_plane': 'control-plane-1'
+        'hostname': 'ardana-cp1-c0-m1-mgmt'
+    'my_disk_models':
+        'name': 'VM-DISKS'
+        'volume_groups':
+        -   'logical_volumes':
+            -   'fstype': 'ext4'
+                'mount': '/'
+                'name': 'root'
+                'size': '95%'
+            'name': 'ardana-vg'
+            'physical_volumes':
+            - '/dev/sda_root'
+    'my_id': 'lifecycle-manager'
+    'my_logical_volumes': {}
+    'my_memory_model': {}
+    'my_network_groups':
+        'MANAGEMENT':
+        -   'address': '192.168.16.10'
+            'cidr': '192.168.16.0/24'
+            'device': 'hed1'
+            'gateway-ip': '192.168.16.254'
+            'network-name': 'MANAGEMENT-NET'
+            'tagged-vlan': !!bool 'false'
+            'vlanid': !!int '100'
+    'my_network_tags': []
+    'my_service_ips': {}
+    'my_vms': []
+    'pass_through': {}
+    'role': 'LIFECYCLE-MANAGER-ROLE'
+    'tls_in': []
+    'tls_out': []
+    'vars':
+        'member_id': !!int '1'
+        'my_hostname_address': '192.168.16.10'
+        'my_network_interfaces': {}
+        'my_network_name': 'ardana-cp1-c0-m1-mgmt'
+'network_ether_interfaces':
+-   'address': '192.168.16.10'
+    'bootproto': 'static'
+    'cidr': '192.168.16.0/24'
+    'device': 'hed1'
+    'family': 'IPv4'
+    'gateway': '192.168.16.254'
+    'netmask': !!int '24'
+    'route':
+    -   'gateway': '192.168.16.254'
+        'netmask': '0.0.0.0'
+        'network': '0.0.0.0'
+    -   'gateway': '192.168.16.254'
+        'netmask': '255.255.255.0'
+        'network': '172.30.1.0'
+    'routing_table': 'MANAGEMENT'
+'nic_mappings':
+-   'bus_address': '0000:0b:00.0'
+    'logical_name': 'hed1'
+    'type': 'simple-port'
+'ntp_servers':
+- '192.168.16.254'
+'smtp': !!null 'null'

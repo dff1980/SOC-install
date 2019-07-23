@@ -1,0 +1,25 @@
+---
+  product:
+    version: 2
+  ceph_conf:
+    cluster_network: 192.168.15.0/24
+    fsid: 83952fbb-e248-3b23-b550-aafa4480e491
+    mon_host: 192.168.15.21, 192.168.15.22, 192.168.15.23
+    mon_initial_members: osd-01, osd-02, osd-03
+    public_network: 192.168.15.0/24
+  cinder:
+    key: AQDebeJcAAAAABAAHudkxGROwj5yWNiHmvIHQw==
+    rbd_store_pool: mycloud-cloud-volumes
+    rbd_store_user: mycloud-cinder
+  cinder-backup:
+    key: AQDebeJcAAAAABAAUCALx1KTI4kjPkJWdY5VsQ==
+    rbd_store_pool: mycloud-cloud-backups
+    rbd_store_user: mycloud-cinder-backup
+  glance:
+    key: AQDebeJcAAAAABAARJbYpFjDElYC8enVIhfJuw==
+    rbd_store_pool: mycloud-cloud-images
+    rbd_store_user: mycloud-glance
+  nova:
+    rbd_store_pool: mycloud-cloud-vms
+  radosgw_urls:
+  - http://192.168.15.24:80/swift/v1

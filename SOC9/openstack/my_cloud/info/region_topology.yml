@@ -1,0 +1,111 @@
+regions:
+    region1:
+        control_planes:
+            control-plane-1:
+                services:
+                    ardana:
+                    - lifecycle-manager-target
+                    - ardana-service
+                    - lifecycle-manager
+                    barbican:
+                    - barbican-api
+                    - barbican-worker
+                    ceilometer:
+                    - ceilometer-common
+                    - ceilometer-agent-notification
+                    - ceilometer-polling
+                    cinder:
+                    - cinder-api
+                    - cinder-volume
+                    - cinder-scheduler
+                    - cinder-backup
+                    clients:
+                    - barbican-client
+                    - magnum-client
+                    - heat-client
+                    - openstack-client
+                    - cinder-client
+                    - designate-client
+                    - manila-client
+                    - octavia-client
+                    - glance-client
+                    - ceilometer-client
+                    - keystone-client
+                    - monasca-client
+                    - nova-client
+                    - neutron-client
+                    designate:
+                    - designate-api
+                    - designate-central
+                    - designate-mdns
+                    - designate-worker
+                    - designate-producer
+                    foundation:
+                    - ip-cluster
+                    - ntp-client
+                    - bind
+                    - bind-ext
+                    - ardana-ca
+                    - zookeeper
+                    - stunnel
+                    - apache2
+                    - ntp-server
+                    - rabbitmq
+                    - storm
+                    - mysql
+                    - spark
+                    - kafka
+                    - memcached
+                    - cassandra
+                    glance:
+                    - glance-api
+                    heat:
+                    - heat-api-cfn
+                    - heat-engine
+                    - heat-api
+                    horizon:
+                    - horizon
+                    keystone:
+                    - keystone-api
+                    logging:
+                    - logging-api
+                    - logging-producer
+                    - logging-server
+                    - logging-rotate
+                    magnum:
+                    - magnum-api
+                    - magnum-conductor
+                    manila:
+                    - manila-api
+                    monasca:
+                    - monasca-threshold
+                    - monasca-liveness-check
+                    - monasca-api
+                    - monasca-transform
+                    - monasca-notifier
+                    - monasca-agent
+                    - monasca-persister
+                    neutron:
+                    - neutron-ml2-plugin
+                    - neutron-server
+                    - neutron-openvswitch-agent
+                    - neutron-metadata-agent
+                    - neutron-dhcp-agent
+                    - neutron-vpn-agent
+                    - neutron-l3-agent
+                    nova:
+                    - nova-novncproxy
+                    - nova-compute
+                    - nova-conductor
+                    - nova-api
+                    - nova-scheduler
+                    - nova-placement-api
+                    - nova-metadata
+                    - nova-compute-kvm
+                    octavia:
+                    - octavia-health-manager
+                    - octavia-api
+                    operations:
+                    - ops-console-web
+                    tempest:
+                    - tempest
