@@ -9,4 +9,6 @@ grep "keystone_admin_pwd:" /var/lib/ardana/scratch/ansible/next/ardana/ansible/g
 ```
 
 need restart compute node at next task: (for Huge Page start after reboot)
-TASK: [network_interface | configure | SUSE- Restart openvswitch] ************* 
+TASK: [network_interface | configure | SUSE- Restart openvswitch] *************
+
+ansible-playbook -i hosts/localhost config-processor-run.yml -e remove_deleted_servers=True -e free_unused_addresses=True -e encrypt="" -e rekey=""
