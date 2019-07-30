@@ -1,4 +1,10 @@
-# Demo SOC 9 for ESX
+# Project #01-19
+Enter ntp-server at cloudConfig.yml
+
+
+
+
+#Demo SOC 9 for ESX
 
 
 added VLAN15 for Ceph Storage Network
