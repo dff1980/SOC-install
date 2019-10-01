@@ -1,0 +1,32 @@
+<html>
+
+<h1>Cloud: kvm-ironic-ceph</h1>
+<head><link href="ardana.css" type="text/css" rel="stylesheet"></head>
+<h2><a href="Control_Planes.html">Control Plane View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Regions.html">Region View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Services.html">Service View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Networks.html">Network View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Server_View.html">Server View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Server_Groups.html">Server Groups View</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h2>
+<br>
+<h2>CPU Models</h2>
+<h3><a name="COMPUTE-CPU">COMPUTE-CPU</a></h3>
+<table>
+<tr><td class="title"></td><td width="150" align="center" class="title">Components</td><td width="150" align="center" class="title">Role</td><td width="150" align="center" class="title">CPU IDs</td><td width="150" align="center" class="title">Isolated</td></tr>
+<tr><td rowspan="3">Assignments</td><td align="center" rowspan="1">nova-compute-kvm<br></td><td align="center">vm</td><td align="center">0-1,3,5-7</td><td align="center">True</td></tr>
+<tr><td align="center" rowspan="2">openvswitch<br></td><td align="center">eal</td><td align="center">4,12</td><td align="center">False</td></tr>
+<tr><td align="center">pmd</td><td align="center">2,10</td><td align="center">True</td></tr>
+</table>
+<table class="used_by">
+<tr>
+<td class="used_by">Used By:</td>
+<td class="used_by"><a href="Server_Roles.html#COMPUTE-ROLE">COMPUTE-ROLE</a></td>
+</table>
+<br>
+<br>
+<h3><a name="VIRTUAL-CONTROLLER-CPU">VIRTUAL-CONTROLLER-CPU</a></h3>
+<table>
+<tr><td>VM Size</td><td>4 vcpus</td></tr>
+</table>
+<table class="used_by">
+<tr>
+<td class="used_by">Used By:</td>
+</table>
+<br>
+<br>
+</html>

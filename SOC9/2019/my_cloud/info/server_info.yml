@@ -1,0 +1,712 @@
+compute1:
+    control-plane-name: control-plane-1
+    disk-model:
+        name: VM-DISKS
+        volume-groups:
+        -   logical-volumes:
+            -   fstype: ext4
+                mount: /
+                name: root
+                size: 95%
+            name: ardana-vg
+            physical-volumes:
+            - /dev/sda_root
+    failure-zone: AZ1
+    hostname: ardana-cp1-comp0001-mgmt
+    net_data:
+        BOND0:
+            MANAGEMENT-NET:
+                addr: 192.168.16.6
+                addresses:
+                - 192.168.16.1-192.168.16.254
+                cidr: 192.168.16.0/24
+                endpoints:
+                    lifecycle-manager-target:
+                        use-tls: false
+                    neutron-l3-agent:
+                        use-tls: false
+                    neutron-metadata-agent:
+                        use-tls: false
+                    neutron-openvswitch-agent:
+                        use-tls: false
+                    nova-compute:
+                        use-tls: false
+                    nova-compute-kvm:
+                        use-tls: false
+                    ntp-client:
+                        use-tls: false
+                    openvswitch:
+                        use-tls: false
+                    stunnel:
+                        use-tls: false
+                gateway-ip: 192.168.16.254
+                network-group: MANAGEMENT
+                tagged-vlan: false
+                vlan-id: 100
+            STORAGE-NET:
+                addr: 192.168.15.205
+                addresses:
+                - 192.168.15.201-192.168.15.250
+                cidr: 192.168.15.0/24
+                endpoints: {}
+                gateway-ip: null
+                network-group: STORAGE
+                tagged-vlan: true
+                vlan-id: 15
+        BOND1:
+            EXTERNAL-VM-NET:
+                addr: null
+                addresses: []
+                cidr: null
+                endpoints: {}
+                gateway-ip: null
+                network-group: EXTERNAL-VM
+                tagged-vlan: false
+                vlan-id: 100
+            GUEST-NET:
+                addr: 10.1.1.5
+                addresses:
+                - 10.1.1.1-10.1.1.254
+                cidr: 10.1.1.0/24
+                endpoints: {}
+                gateway-ip: 10.1.1.1
+                network-group: GUEST
+                tagged-vlan: true
+                vlan-id: 103
+    region: region1
+    role: COMPUTE-ROLE
+    state: allocated
+compute2:
+    control-plane-name: control-plane-1
+    disk-model:
+        name: VM-DISKS
+        volume-groups:
+        -   logical-volumes:
+            -   fstype: ext4
+                mount: /
+                name: root
+                size: 95%
+            name: ardana-vg
+            physical-volumes:
+            - /dev/sda_root
+    failure-zone: AZ1
+    hostname: ardana-cp1-comp0002-mgmt
+    net_data:
+        BOND0:
+            MANAGEMENT-NET:
+                addr: 192.168.16.7
+                addresses:
+                - 192.168.16.1-192.168.16.254
+                cidr: 192.168.16.0/24
+                endpoints:
+                    lifecycle-manager-target:
+                        use-tls: false
+                    neutron-l3-agent:
+                        use-tls: false
+                    neutron-metadata-agent:
+                        use-tls: false
+                    neutron-openvswitch-agent:
+                        use-tls: false
+                    nova-compute:
+                        use-tls: false
+                    nova-compute-kvm:
+                        use-tls: false
+                    ntp-client:
+                        use-tls: false
+                    openvswitch:
+                        use-tls: false
+                    stunnel:
+                        use-tls: false
+                gateway-ip: 192.168.16.254
+                network-group: MANAGEMENT
+                tagged-vlan: false
+                vlan-id: 100
+            STORAGE-NET:
+                addr: 192.168.15.206
+                addresses:
+                - 192.168.15.201-192.168.15.250
+                cidr: 192.168.15.0/24
+                endpoints: {}
+                gateway-ip: null
+                network-group: STORAGE
+                tagged-vlan: true
+                vlan-id: 15
+        BOND1:
+            EXTERNAL-VM-NET:
+                addr: null
+                addresses: []
+                cidr: null
+                endpoints: {}
+                gateway-ip: null
+                network-group: EXTERNAL-VM
+                tagged-vlan: false
+                vlan-id: 100
+            GUEST-NET:
+                addr: 10.1.1.6
+                addresses:
+                - 10.1.1.1-10.1.1.254
+                cidr: 10.1.1.0/24
+                endpoints: {}
+                gateway-ip: 10.1.1.1
+                network-group: GUEST
+                tagged-vlan: true
+                vlan-id: 103
+    region: region1
+    role: COMPUTE-ROLE
+    state: allocated
+controller1:
+    control-plane-name: control-plane-1
+    disk-model:
+        name: VM-DISKS
+        volume-groups:
+        -   logical-volumes:
+            -   fstype: ext4
+                mount: /
+                name: root
+                size: 95%
+            name: ardana-vg
+            physical-volumes:
+            - /dev/sda_root
+    failure-zone: AZ1
+    hostname: ardana-cp1-c1-m1-mgmt
+    net_data:
+        BOND0:
+            EXTERNAL-API-NET:
+                addr: 10.0.1.2
+                addresses:
+                - 10.0.1.1-10.0.1.254
+                cidr: 10.0.1.0/24
+                endpoints: {}
+                gateway-ip: 10.0.1.1
+                network-group: EXTERNAL-API
+                tagged-vlan: true
+                vlan-id: 101
+            GUEST-Baremetals-NET:
+                addr: 192.168.254.2
+                addresses:
+                - 192.168.254.1-192.168.254.254
+                cidr: 192.168.254.0/24
+                endpoints: {}
+                gateway-ip: 192.168.254.1
+                network-group: GUEST-Baremetals
+                tagged-vlan: true
+                vlan-id: 16
+            GUEST-NET:
+                addr: 10.1.1.2
+                addresses:
+                - 10.1.1.1-10.1.1.254
+                cidr: 10.1.1.0/24
+                endpoints: {}
+                gateway-ip: 10.1.1.1
+                network-group: GUEST
+                tagged-vlan: true
+                vlan-id: 103
+            MANAGEMENT-NET:
+                addr: 192.168.16.3
+                addresses:
+                - 192.168.16.1-192.168.16.254
+                cidr: 192.168.16.0/24
+                endpoints:
+                    apache2:
+                        use-tls: false
+                    barbican-api:
+                        use-tls: true
+                    barbican-client:
+                        use-tls: false
+                    barbican-worker:
+                        use-tls: false
+                    cinder-api:
+                        use-tls: false
+                    cinder-backup:
+                        use-tls: false
+                    cinder-client:
+                        use-tls: false
+                    cinder-scheduler:
+                        use-tls: false
+                    cinder-volume:
+                        use-tls: false
+                    glance-api:
+                        use-tls: false
+                    glance-client:
+                        use-tls: false
+                    heat-api:
+                        use-tls: false
+                    heat-api-cfn:
+                        use-tls: false
+                    heat-client:
+                        use-tls: false
+                    heat-engine:
+                        use-tls: false
+                    horizon:
+                        use-tls: false
+                    ip-cluster:
+                        use-tls: false
+                    ironic-api:
+                        use-tls: false
+                    ironic-client:
+                        use-tls: false
+                    ironic-conductor:
+                        use-tls: false
+                    keystone-api:
+                        use-tls: false
+                    keystone-client:
+                        use-tls: false
+                    lifecycle-manager-target:
+                        use-tls: false
+                    memcached:
+                        use-tls: false
+                    mysql:
+                        use-tls: false
+                    neutron-client:
+                        use-tls: false
+                    neutron-dhcp-agent:
+                        use-tls: false
+                    neutron-metadata-agent:
+                        use-tls: false
+                    neutron-ml2-plugin:
+                        use-tls: false
+                    neutron-openvswitch-agent:
+                        use-tls: false
+                    neutron-server:
+                        use-tls: false
+                    neutron-vpn-agent:
+                        use-tls: false
+                    nova-api:
+                        use-tls: false
+                    nova-client:
+                        use-tls: false
+                    nova-conductor:
+                        use-tls: false
+                    nova-metadata:
+                        use-tls: false
+                    nova-novncproxy:
+                        use-tls: false
+                    nova-placement-api:
+                        use-tls: false
+                    nova-scheduler:
+                        use-tls: false
+                    nova-scheduler-ironic:
+                        use-tls: false
+                    ntp-server:
+                        use-tls: false
+                    octavia-api:
+                        use-tls: false
+                    octavia-client:
+                        use-tls: false
+                    octavia-health-manager:
+                        use-tls: false
+                    openstack-client:
+                        use-tls: false
+                    ops-console-web:
+                        use-tls: false
+                    rabbitmq:
+                        use-tls: false
+                    stunnel:
+                        use-tls: false
+                    swift-client:
+                        use-tls: false
+                gateway-ip: 192.168.16.254
+                network-group: MANAGEMENT
+                tagged-vlan: false
+                vlan-id: 100
+            STORAGE-NET:
+                addr: 192.168.15.202
+                addresses:
+                - 192.168.15.201-192.168.15.250
+                cidr: 192.168.15.0/24
+                endpoints: {}
+                gateway-ip: null
+                network-group: STORAGE
+                tagged-vlan: true
+                vlan-id: 15
+    region: region1
+    role: CONTROLLER-ROLE
+    state: allocated
+controller2:
+    control-plane-name: control-plane-1
+    disk-model:
+        name: VM-DISKS
+        volume-groups:
+        -   logical-volumes:
+            -   fstype: ext4
+                mount: /
+                name: root
+                size: 95%
+            name: ardana-vg
+            physical-volumes:
+            - /dev/sda_root
+    failure-zone: AZ2
+    hostname: ardana-cp1-c1-m2-mgmt
+    net_data:
+        BOND0:
+            EXTERNAL-API-NET:
+                addr: 10.0.1.3
+                addresses:
+                - 10.0.1.1-10.0.1.254
+                cidr: 10.0.1.0/24
+                endpoints: {}
+                gateway-ip: 10.0.1.1
+                network-group: EXTERNAL-API
+                tagged-vlan: true
+                vlan-id: 101
+            GUEST-Baremetals-NET:
+                addr: 192.168.254.3
+                addresses:
+                - 192.168.254.1-192.168.254.254
+                cidr: 192.168.254.0/24
+                endpoints: {}
+                gateway-ip: 192.168.254.1
+                network-group: GUEST-Baremetals
+                tagged-vlan: true
+                vlan-id: 16
+            GUEST-NET:
+                addr: 10.1.1.3
+                addresses:
+                - 10.1.1.1-10.1.1.254
+                cidr: 10.1.1.0/24
+                endpoints: {}
+                gateway-ip: 10.1.1.1
+                network-group: GUEST
+                tagged-vlan: true
+                vlan-id: 103
+            MANAGEMENT-NET:
+                addr: 192.168.16.4
+                addresses:
+                - 192.168.16.1-192.168.16.254
+                cidr: 192.168.16.0/24
+                endpoints:
+                    apache2:
+                        use-tls: false
+                    barbican-api:
+                        use-tls: true
+                    barbican-client:
+                        use-tls: false
+                    barbican-worker:
+                        use-tls: false
+                    cinder-api:
+                        use-tls: false
+                    cinder-backup:
+                        use-tls: false
+                    cinder-client:
+                        use-tls: false
+                    cinder-scheduler:
+                        use-tls: false
+                    cinder-volume:
+                        use-tls: false
+                    glance-api:
+                        use-tls: false
+                    glance-client:
+                        use-tls: false
+                    heat-api:
+                        use-tls: false
+                    heat-api-cfn:
+                        use-tls: false
+                    heat-client:
+                        use-tls: false
+                    heat-engine:
+                        use-tls: false
+                    horizon:
+                        use-tls: false
+                    ip-cluster:
+                        use-tls: false
+                    ironic-api:
+                        use-tls: false
+                    ironic-client:
+                        use-tls: false
+                    ironic-conductor:
+                        use-tls: false
+                    keystone-api:
+                        use-tls: false
+                    keystone-client:
+                        use-tls: false
+                    lifecycle-manager-target:
+                        use-tls: false
+                    memcached:
+                        use-tls: false
+                    mysql:
+                        use-tls: false
+                    neutron-client:
+                        use-tls: false
+                    neutron-dhcp-agent:
+                        use-tls: false
+                    neutron-metadata-agent:
+                        use-tls: false
+                    neutron-ml2-plugin:
+                        use-tls: false
+                    neutron-openvswitch-agent:
+                        use-tls: false
+                    neutron-server:
+                        use-tls: false
+                    neutron-vpn-agent:
+                        use-tls: false
+                    nova-api:
+                        use-tls: false
+                    nova-client:
+                        use-tls: false
+                    nova-conductor:
+                        use-tls: false
+                    nova-metadata:
+                        use-tls: false
+                    nova-novncproxy:
+                        use-tls: false
+                    nova-placement-api:
+                        use-tls: false
+                    nova-scheduler:
+                        use-tls: false
+                    nova-scheduler-ironic:
+                        use-tls: false
+                    ntp-server:
+                        use-tls: false
+                    octavia-api:
+                        use-tls: false
+                    octavia-client:
+                        use-tls: false
+                    octavia-health-manager:
+                        use-tls: false
+                    openstack-client:
+                        use-tls: false
+                    ops-console-web:
+                        use-tls: false
+                    rabbitmq:
+                        use-tls: false
+                    stunnel:
+                        use-tls: false
+                    swift-client:
+                        use-tls: false
+                gateway-ip: 192.168.16.254
+                network-group: MANAGEMENT
+                tagged-vlan: false
+                vlan-id: 100
+            STORAGE-NET:
+                addr: 192.168.15.203
+                addresses:
+                - 192.168.15.201-192.168.15.250
+                cidr: 192.168.15.0/24
+                endpoints: {}
+                gateway-ip: null
+                network-group: STORAGE
+                tagged-vlan: true
+                vlan-id: 15
+    region: region1
+    role: CONTROLLER-ROLE
+    state: allocated
+controller3:
+    control-plane-name: control-plane-1
+    disk-model:
+        name: VM-DISKS
+        volume-groups:
+        -   logical-volumes:
+            -   fstype: ext4
+                mount: /
+                name: root
+                size: 95%
+            name: ardana-vg
+            physical-volumes:
+            - /dev/sda_root
+    failure-zone: AZ3
+    hostname: ardana-cp1-c1-m3-mgmt
+    net_data:
+        BOND0:
+            EXTERNAL-API-NET:
+                addr: 10.0.1.4
+                addresses:
+                - 10.0.1.1-10.0.1.254
+                cidr: 10.0.1.0/24
+                endpoints: {}
+                gateway-ip: 10.0.1.1
+                network-group: EXTERNAL-API
+                tagged-vlan: true
+                vlan-id: 101
+            GUEST-Baremetals-NET:
+                addr: 192.168.254.4
+                addresses:
+                - 192.168.254.1-192.168.254.254
+                cidr: 192.168.254.0/24
+                endpoints: {}
+                gateway-ip: 192.168.254.1
+                network-group: GUEST-Baremetals
+                tagged-vlan: true
+                vlan-id: 16
+            GUEST-NET:
+                addr: 10.1.1.4
+                addresses:
+                - 10.1.1.1-10.1.1.254
+                cidr: 10.1.1.0/24
+                endpoints: {}
+                gateway-ip: 10.1.1.1
+                network-group: GUEST
+                tagged-vlan: true
+                vlan-id: 103
+            MANAGEMENT-NET:
+                addr: 192.168.16.5
+                addresses:
+                - 192.168.16.1-192.168.16.254
+                cidr: 192.168.16.0/24
+                endpoints:
+                    apache2:
+                        use-tls: false
+                    barbican-api:
+                        use-tls: true
+                    barbican-client:
+                        use-tls: false
+                    barbican-worker:
+                        use-tls: false
+                    cinder-api:
+                        use-tls: false
+                    cinder-backup:
+                        use-tls: false
+                    cinder-client:
+                        use-tls: false
+                    cinder-scheduler:
+                        use-tls: false
+                    cinder-volume:
+                        use-tls: false
+                    glance-api:
+                        use-tls: false
+                    glance-client:
+                        use-tls: false
+                    heat-api:
+                        use-tls: false
+                    heat-api-cfn:
+                        use-tls: false
+                    heat-client:
+                        use-tls: false
+                    heat-engine:
+                        use-tls: false
+                    horizon:
+                        use-tls: false
+                    ip-cluster:
+                        use-tls: false
+                    ironic-api:
+                        use-tls: false
+                    ironic-client:
+                        use-tls: false
+                    ironic-conductor:
+                        use-tls: false
+                    keystone-api:
+                        use-tls: false
+                    keystone-client:
+                        use-tls: false
+                    lifecycle-manager-target:
+                        use-tls: false
+                    memcached:
+                        use-tls: false
+                    mysql:
+                        use-tls: false
+                    neutron-client:
+                        use-tls: false
+                    neutron-dhcp-agent:
+                        use-tls: false
+                    neutron-metadata-agent:
+                        use-tls: false
+                    neutron-ml2-plugin:
+                        use-tls: false
+                    neutron-openvswitch-agent:
+                        use-tls: false
+                    neutron-server:
+                        use-tls: false
+                    neutron-vpn-agent:
+                        use-tls: false
+                    nova-api:
+                        use-tls: false
+                    nova-client:
+                        use-tls: false
+                    nova-conductor:
+                        use-tls: false
+                    nova-metadata:
+                        use-tls: false
+                    nova-novncproxy:
+                        use-tls: false
+                    nova-placement-api:
+                        use-tls: false
+                    nova-scheduler:
+                        use-tls: false
+                    nova-scheduler-ironic:
+                        use-tls: false
+                    ntp-server:
+                        use-tls: false
+                    octavia-api:
+                        use-tls: false
+                    octavia-client:
+                        use-tls: false
+                    octavia-health-manager:
+                        use-tls: false
+                    openstack-client:
+                        use-tls: false
+                    ops-console-web:
+                        use-tls: false
+                    rabbitmq:
+                        use-tls: false
+                    stunnel:
+                        use-tls: false
+                    swift-client:
+                        use-tls: false
+                gateway-ip: 192.168.16.254
+                network-group: MANAGEMENT
+                tagged-vlan: false
+                vlan-id: 100
+            STORAGE-NET:
+                addr: 192.168.15.204
+                addresses:
+                - 192.168.15.201-192.168.15.250
+                cidr: 192.168.15.0/24
+                endpoints: {}
+                gateway-ip: null
+                network-group: STORAGE
+                tagged-vlan: true
+                vlan-id: 15
+    region: region1
+    role: CONTROLLER-ROLE
+    state: allocated
+lifecycle-manager:
+    control-plane-name: control-plane-1
+    disk-model:
+        name: VM-DISKS
+        volume-groups:
+        -   logical-volumes:
+            -   fstype: ext4
+                mount: /
+                name: root
+                size: 95%
+            name: ardana-vg
+            physical-volumes:
+            - /dev/sda_root
+    failure-zone: AZ1
+    hostname: ardana-cp1-c0-m1-mgmt
+    net_data:
+        HED1:
+            MANAGEMENT-NET:
+                addr: 192.168.16.10
+                addresses:
+                - 192.168.16.1-192.168.16.254
+                cidr: 192.168.16.0/24
+                endpoints:
+                    ardana-ca:
+                        use-tls: false
+                    ardana-service:
+                        use-tls: false
+                    lifecycle-manager:
+                        use-tls: false
+                    lifecycle-manager-target:
+                        use-tls: false
+                    ntp-server:
+                        use-tls: false
+                    stunnel:
+                        use-tls: false
+                gateway-ip: 192.168.16.254
+                network-group: MANAGEMENT
+                tagged-vlan: false
+                vlan-id: 100
+            STORAGE-NET:
+                addr: 192.168.15.201
+                addresses:
+                - 192.168.15.201-192.168.15.250
+                cidr: 192.168.15.0/24
+                endpoints: {}
+                gateway-ip: null
+                network-group: STORAGE
+                tagged-vlan: true
+                vlan-id: 15
+    region: region1
+    role: LIFECYCLE-MANAGER-ROLE
+    state: allocated

@@ -1,0 +1,13 @@
+---
+  product:
+     version: 2
+
+  memory-models:
+    - name: COMPUTE-MEMORY-NUMA
+      default-huge-page-size: 1G
+      huge-pages:
+        - size: 1G
+          count: 12
+    - name: VIRTUAL-CONTROLLER-MEMORY
+      vm-size:
+        ram: 6G
