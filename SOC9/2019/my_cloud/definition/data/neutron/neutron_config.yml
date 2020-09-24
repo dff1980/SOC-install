@@ -1,0 +1,79 @@
+#
+# (c) Copyright 2016 Hewlett Packard Enterprise Development LP
+# (c) Copyright 2018 SUSE LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may
+# not use this file except in compliance with the License. You may obtain
+# a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+# License for the specific language governing permissions and limitations
+# under the License.
+#
+---
+  product:
+    version: 2
+
+  configuration-data:
+    - name:  NEUTRON-CONFIG-CP1
+      services:
+        - neutron
+      data:
+        neutron_provider_networks:
+        - name: OCTAVIA-MGMT-NET
+          provider:
+            - network_type: vlan
+              physical_network: physnet1
+              segmentation_id: 106
+          cidr: 172.30.1.0/24
+          no_gateway:  True
+          enable_dhcp: True
+          allocation_pools:
+            - start: 172.30.1.10
+              end: 172.30.1.250
+          host_routes:
+            # route to MANAGEMENT-NET
+            - destination: 192.168.16.0/24
+              nexthop:  172.30.1.1
+
+        - name: guest-network-ironic
+          cidr: 192.168.245.0/24
+
+          # DHCP must be enabled for guest network being used for ironic
+          # nodes.
+          enable_dhcp: True
+          shared: True
+          allocation_pools:
+            - start: 192.168.245.220
+              end: 192.168.245.230
+
+          # Make sure the gateway can route to Management network.
+          gateway_ip: 192.168.245.254
+          provider:
+            # Ironic cloud supports only flat network type.
+            - network_type: flat
+              physical_network: ironic
+
+          # Uncomment to set specific routes.
+
+          host_routes:
+            - destination: 192.168.16.0/24
+              nexthop: 192.168.245.1
+          #   - destination: 192.168.245.128/28
+          #     nexthop: 192.168.245.129
+
+
+        neutron_external_networks:
+        - name: ext-net
+          cidr: 192.168.16.0/24
+          gateway: 192.168.16.254
+          allocation_pools:
+            - start: 192.168.16.220
+              end: 192.168.16.230
+          provider:
+          - network_type: flat
+            physical_network: external

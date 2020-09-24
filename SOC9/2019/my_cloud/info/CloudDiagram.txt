@@ -1,0 +1,142 @@
++-ControlPlane: region1 (control-plane-1)----------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                              |
+| +-Cluster cluster0 ()------------------------------+                                                                                                         |
+| |                                                  |                                                                                                         |
+| | +-ardana-cp1-c0-m1 (192.168.16.10)-------------+ |                                                                                                         |
+| | |                                              | |                                                                                                         |
+| | | ardana                                       | |                                                                                                         |
+| | |   ardana-service                             | |                                                                                                         |
+| | |   lifecycle-manager                          | |                                                                                                         |
+| | |   lifecycle-manager-target                   | |                                                                                                         |
+| | | foundation                                   | |                                                                                                         |
+| | |   ardana-ca                                  | |                                                                                                         |
+| | |   ntp-server                                 | |                                                                                                         |
+| | |   stunnel                                    | |                                                                                                         |
+| | |                                              | |                                                                                                         |
+| | | -------------------------------------------- | |                                                                                                         |
+| | |                                              | |                                                                                                         |
+| | | hed0                                         | |                                                                                                         |
+| | |   MANAGEMENT-NET (192.168.16.10)             | |                                                                                                         |
+| | |   STORAGE-NET (192.168.15.201)               | |                                                                                                         |
+| | |                                              | |                                                                                                         |
+| | +----------------------------------------------+ |                                                                                                         |
+| |                                                  |                                                                                                         |
+| +--------------------------------------------------+                                                                                                         |
+|                                                                                                                                                              |
+| +-Cluster cluster1 ()--------------------------------------------------------------------------------------------------------------------------------------+ |
+| |                                                                                                                                                          | |
+| | +-ardana-cp1-c1-m1 (192.168.16.3)--------------+    +-ardana-cp1-c1-m2 (192.168.16.4)--------------+    +-ardana-cp1-c1-m3 (192.168.16.5)--------------+ | |
+| | |                                              |    |                                              |    |                                              | | |
+| | | ardana                                       |    | ardana                                       |    | ardana                                       | | |
+| | |   lifecycle-manager-target                   |    |   lifecycle-manager-target                   |    |   lifecycle-manager-target                   | | |
+| | | barbican                                     |    | barbican                                     |    | barbican                                     | | |
+| | |   barbican-api                               |    |   barbican-api                               |    |   barbican-api                               | | |
+| | |   barbican-worker                            |    |   barbican-worker                            |    |   barbican-worker                            | | |
+| | | cinder                                       |    | cinder                                       |    | cinder                                       | | |
+| | |   cinder-api                                 |    |   cinder-api                                 |    |   cinder-api                                 | | |
+| | |   cinder-backup                              |    |   cinder-backup                              |    |   cinder-backup                              | | |
+| | |   cinder-scheduler                           |    |   cinder-scheduler                           |    |   cinder-scheduler                           | | |
+| | |   cinder-volume                              |    |   cinder-volume                              |    |   cinder-volume                              | | |
+| | | clients                                      |    | clients                                      |    | clients                                      | | |
+| | |   barbican-client                            |    |   barbican-client                            |    |   barbican-client                            | | |
+| | |   cinder-client                              |    |   cinder-client                              |    |   cinder-client                              | | |
+| | |   glance-client                              |    |   glance-client                              |    |   glance-client                              | | |
+| | |   heat-client                                |    |   heat-client                                |    |   heat-client                                | | |
+| | |   ironic-client                              |    |   ironic-client                              |    |   ironic-client                              | | |
+| | |   keystone-client                            |    |   keystone-client                            |    |   keystone-client                            | | |
+| | |   neutron-client                             |    |   neutron-client                             |    |   neutron-client                             | | |
+| | |   nova-client                                |    |   nova-client                                |    |   nova-client                                | | |
+| | |   octavia-client                             |    |   octavia-client                             |    |   octavia-client                             | | |
+| | |   openstack-client                           |    |   openstack-client                           |    |   openstack-client                           | | |
+| | |   swift-client                               |    |   swift-client                               |    |   swift-client                               | | |
+| | | foundation                                   |    | foundation                                   |    | foundation                                   | | |
+| | |   apache2                                    |    |   apache2                                    |    |   apache2                                    | | |
+| | |   ip-cluster                                 |    |   ip-cluster                                 |    |   ip-cluster                                 | | |
+| | |   memcached                                  |    |   memcached                                  |    |   memcached                                  | | |
+| | |   mysql                                      |    |   mysql                                      |    |   mysql                                      | | |
+| | |   ntp-server                                 |    |   ntp-server                                 |    |   ntp-server                                 | | |
+| | |   rabbitmq                                   |    |   rabbitmq                                   |    |   rabbitmq                                   | | |
+| | |   stunnel                                    |    |   stunnel                                    |    |   stunnel                                    | | |
+| | | glance                                       |    | glance                                       |    | glance                                       | | |
+| | |   glance-api                                 |    |   glance-api                                 |    |   glance-api                                 | | |
+| | | heat                                         |    | heat                                         |    | heat                                         | | |
+| | |   heat-api                                   |    |   heat-api                                   |    |   heat-api                                   | | |
+| | |   heat-api-cfn                               |    |   heat-api-cfn                               |    |   heat-api-cfn                               | | |
+| | |   heat-engine                                |    |   heat-engine                                |    |   heat-engine                                | | |
+| | | horizon                                      |    | horizon                                      |    | horizon                                      | | |
+| | |   horizon                                    |    |   horizon                                    |    |   horizon                                    | | |
+| | | ironic                                       |    | ironic                                       |    | ironic                                       | | |
+| | |   ironic-api                                 |    |   ironic-api                                 |    |   ironic-api                                 | | |
+| | |   ironic-conductor                           |    |   ironic-conductor                           |    |   ironic-conductor                           | | |
+| | | keystone                                     |    | keystone                                     |    | keystone                                     | | |
+| | |   keystone-api                               |    |   keystone-api                               |    |   keystone-api                               | | |
+| | | neutron                                      |    | neutron                                      |    | neutron                                      | | |
+| | |   neutron-dhcp-agent                         |    |   neutron-dhcp-agent                         |    |   neutron-dhcp-agent                         | | |
+| | |   neutron-metadata-agent                     |    |   neutron-metadata-agent                     |    |   neutron-metadata-agent                     | | |
+| | |   neutron-ml2-plugin                         |    |   neutron-ml2-plugin                         |    |   neutron-ml2-plugin                         | | |
+| | |   neutron-openvswitch-agent                  |    |   neutron-openvswitch-agent                  |    |   neutron-openvswitch-agent                  | | |
+| | |   neutron-server                             |    |   neutron-server                             |    |   neutron-server                             | | |
+| | |   neutron-vpn-agent                          |    |   neutron-vpn-agent                          |    |   neutron-vpn-agent                          | | |
+| | | nova                                         |    | nova                                         |    | nova                                         | | |
+| | |   nova-api                                   |    |   nova-api                                   |    |   nova-api                                   | | |
+| | |   nova-conductor                             |    |   nova-conductor                             |    |   nova-conductor                             | | |
+| | |   nova-metadata                              |    |   nova-metadata                              |    |   nova-metadata                              | | |
+| | |   nova-novncproxy                            |    |   nova-novncproxy                            |    |   nova-novncproxy                            | | |
+| | |   nova-placement-api                         |    |   nova-placement-api                         |    |   nova-placement-api                         | | |
+| | |   nova-scheduler                             |    |   nova-scheduler                             |    |   nova-scheduler                             | | |
+| | |   nova-scheduler-ironic                      |    |   nova-scheduler-ironic                      |    |   nova-scheduler-ironic                      | | |
+| | | octavia                                      |    | octavia                                      |    | octavia                                      | | |
+| | |   octavia-api                                |    |   octavia-api                                |    |   octavia-api                                | | |
+| | |   octavia-health-manager                     |    |   octavia-health-manager                     |    |   octavia-health-manager                     | | |
+| | | operations                                   |    | operations                                   |    | operations                                   | | |
+| | |   ops-console-web                            |    |   ops-console-web                            |    |   ops-console-web                            | | |
+| | |                                              |    |                                              |    |                                              | | |
+| | | -------------------------------------------- |    | -------------------------------------------- |    | -------------------------------------------- | | |
+| | |                                              |    |                                              |    |                                              | | |
+| | | bond0 (hed0, hed1)                           |    | bond0 (hed0, hed1)                           |    | bond0 (hed0, hed1)                           | | |
+| | |   EXTERNAL-API-NET (10.0.1.2)                |    |   EXTERNAL-API-NET (10.0.1.3)                |    |   EXTERNAL-API-NET (10.0.1.4)                | | |
+| | |   GUEST-Baremetals-NET (192.168.254.2)       |    |   GUEST-Baremetals-NET (192.168.254.3)       |    |   GUEST-Baremetals-NET (192.168.254.4)       | | |
+| | |   GUEST-NET (10.1.1.2)                       |    |   GUEST-NET (10.1.1.3)                       |    |   GUEST-NET (10.1.1.4)                       | | |
+| | |   MANAGEMENT-NET (192.168.16.3)              |    |   MANAGEMENT-NET (192.168.16.4)              |    |   MANAGEMENT-NET (192.168.16.5)              | | |
+| | |   STORAGE-NET (192.168.15.202)               |    |   STORAGE-NET (192.168.15.203)               |    |   STORAGE-NET (192.168.15.204)               | | |
+| | |                                              |    |                                              |    |                                              | | |
+| | +----------------------------------------------+    +----------------------------------------------+    +----------------------------------------------+ | |
+| |                                                                                                                                                          | |
+| +----------------------------------------------------------------------------------------------------------------------------------------------------------+ |
+|                                                                                                                                                              |
+| +-compute------------------------------------------+                                                                                                         |
+| |                                                  |                                                                                                         |
+| | +-COMPUTE-ROLE (AZ1) (2 servers)---------------+ |                                                                                                         |
+| | |                                              | |                                                                                                         |
+| | | ardana                                       | |                                                                                                         |
+| | |   lifecycle-manager-target                   | |                                                                                                         |
+| | | foundation                                   | |                                                                                                         |
+| | |   ntp-client                                 | |                                                                                                         |
+| | |   openvswitch                                | |                                                                                                         |
+| | |   stunnel                                    | |                                                                                                         |
+| | | neutron                                      | |                                                                                                         |
+| | |   neutron-l3-agent                           | |                                                                                                         |
+| | |   neutron-metadata-agent                     | |                                                                                                         |
+| | |   neutron-openvswitch-agent                  | |                                                                                                         |
+| | | nova                                         | |                                                                                                         |
+| | |   nova-compute                               | |                                                                                                         |
+| | |   nova-compute-kvm                           | |                                                                                                         |
+| | |                                              | |                                                                                                         |
+| | | -------------------------------------------- | |                                                                                                         |
+| | |                                              | |                                                                                                         |
+| | | bond0 (hed0, hed1)                           | |                                                                                                         |
+| | |   MANAGEMENT-NET (192.168.16.0/24)           | |                                                                                                         |
+| | |   STORAGE-NET (192.168.15.0/24)              | |                                                                                                         |
+| | | bond1 (dpdk0, dpdk1)                         | |                                                                                                         |
+| | |   EXTERNAL-VM-NET                            | |                                                                                                         |
+| | |   GUEST-NET (10.1.1.0/24)                    | |                                                                                                         |
+| | |                                              | |                                                                                                         |
+| | +----------------------------------------------+ |                                                                                                         |
+| +--------------------------------------------------+                                                                                                         |
+|                                                                                                                                                              |
+|                                                                                                                                                              |
+|                                                                                                                                                              |
+|                                                                                                                                                              |
+|                                                                                                                                                              |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+

@@ -1,0 +1,77 @@
+regions:
+    region1:
+        control_planes:
+            control-plane-1:
+                services:
+                    ardana:
+                    - lifecycle-manager-target
+                    - lifecycle-manager
+                    - ardana-service
+                    barbican:
+                    - barbican-api
+                    - barbican-worker
+                    cinder:
+                    - cinder-api
+                    - cinder-volume
+                    - cinder-scheduler
+                    - cinder-backup
+                    clients:
+                    - barbican-client
+                    - cinder-client
+                    - octavia-client
+                    - ironic-client
+                    - glance-client
+                    - openstack-client
+                    - neutron-client
+                    - swift-client
+                    - heat-client
+                    - keystone-client
+                    - nova-client
+                    foundation:
+                    - ip-cluster
+                    - ntp-client
+                    - ardana-ca
+                    - openvswitch
+                    - stunnel
+                    - apache2
+                    - ntp-server
+                    - rabbitmq
+                    - mysql
+                    - memcached
+                    glance:
+                    - glance-api
+                    heat:
+                    - heat-api-cfn
+                    - heat-engine
+                    - heat-api
+                    horizon:
+                    - horizon
+                    ironic:
+                    - ironic-conductor
+                    - ironic-api
+                    keystone:
+                    - keystone-api
+                    neutron:
+                    - neutron-ml2-plugin
+                    - neutron-server
+                    - neutron-openvswitch-agent
+                    - neutron-metadata-agent
+                    - neutron-dhcp-agent
+                    - neutron-vpn-agent
+                    - neutron-l3-agent
+                    nova:
+                    - nova-novncproxy
+                    - nova-scheduler-ironic
+                    - nova-compute
+                    - nova-conductor
+                    - nova-api
+                    - nova-compute-ironic
+                    - nova-scheduler
+                    - nova-placement-api
+                    - nova-metadata
+                    - nova-compute-kvm
+                    octavia:
+                    - octavia-health-manager
+                    - octavia-api
+                    operations:
+                    - ops-console-web

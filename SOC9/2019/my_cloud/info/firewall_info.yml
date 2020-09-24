@@ -1,0 +1,487 @@
+EXTERNAL-API:
+-   addresses:
+    - 10.0.1.4
+    - 10.0.1.5
+    - 10.0.1.3
+    - 10.0.1.2
+    components:
+    - user-PING
+    port: '8:0'
+    protocol: icmp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - horizon
+    port: '443'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - keystone-api
+    port: '5000'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - nova-novncproxy
+    port: '6080'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - heat-api-cfn
+    port: '8000'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - heat-api
+    port: '8004'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - nova-api
+    port: '8774'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - cinder-api
+    port: '8776'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - nova-placement-api
+    port: '8780'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - ardana-service
+    port: '9085'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - ops-console-web
+    port: '9095'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - glance-api
+    port: '9292'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - barbican-api
+    port: '9311'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - neutron-server
+    port: '9696'
+    protocol: tcp
+-   addresses:
+    - 10.0.1.5
+    components:
+    - octavia-api
+    port: '9876'
+    protocol: tcp
+GUEST:
+-   addresses:
+    - 10.1.1.5
+    - 10.1.1.6
+    - 10.1.1.4
+    - 10.1.1.3
+    - 10.1.1.2
+    components:
+    - user-PING
+    port: '8:0'
+    protocol: icmp
+-   addresses:
+    - 10.1.1.5
+    - 10.1.1.6
+    - 10.1.1.4
+    - 10.1.1.3
+    - 10.1.1.2
+    components:
+    - neutron-openvswitch-agent
+    port: '4789'
+    protocol: udp
+MANAGEMENT:
+-   addresses:
+    - 192.168.16.6
+    - 192.168.16.10
+    - 192.168.16.7
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - user-PING
+    port: '8:0'
+    protocol: icmp
+-   addresses:
+    - 192.168.16.6
+    - 192.168.16.10
+    - 192.168.16.7
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - ssh
+    - lifecycle-manager-target
+    - nova-compute-kvm
+    - lifecycle-manager
+    port: '22'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.10
+    components:
+    - lifecycle-manager
+    port: '67'
+    protocol: udp
+-   addresses:
+    - 192.168.16.10
+    components:
+    - lifecycle-manager
+    port: '68'
+    protocol: udp
+-   addresses:
+    - 192.168.16.10
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - lifecycle-manager
+    - ironic-conductor
+    port: '69'
+    protocol: udp
+-   addresses:
+    - 192.168.16.10
+    components:
+    - lifecycle-manager
+    port: '79'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - horizon
+    port: '80'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.10
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - ntp-server
+    port: '123'
+    protocol: udp
+-   addresses:
+    - 192.168.16.2
+    components:
+    - horizon
+    port: '443'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - ip-cluster
+    port: '1993'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - cinder-volume
+    port: '3260'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - mysql
+    port: '3306'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - rabbitmq
+    port: '4369'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - mysql
+    port: '4444'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - mysql
+    port: '4567'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - mysql
+    port: '4568'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - keystone-api
+    port: '5000'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.6
+    - 192.168.16.10
+    - 192.168.16.7
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - lifecycle-manager-target
+    port: '5099'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - octavia-health-manager
+    port: '5555'
+    protocol: udp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - rabbitmq
+    port: '5671'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - rabbitmq
+    port: '5672'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.6
+    - 192.168.16.7
+    components:
+    - nova-compute
+    port: 5900:6100
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - nova-novncproxy
+    port: '6080'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - ironic-api
+    port: '6385'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - ironic-conductor
+    port: '6386'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - heat-api-cfn
+    port: '8000'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - heat-api
+    port: '8004'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - nova-api
+    port: '8774'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - nova-metadata
+    port: '8775'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - cinder-api
+    port: '8776'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - nova-placement-api
+    port: '8780'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.10
+    - 192.168.16.2
+    components:
+    - ardana-service
+    port: '9085'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - ops-console-web
+    port: '9095'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - glance-api
+    port: '9292'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - barbican-api
+    port: '9311'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - mysql
+    port: '9500'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - neutron-server
+    port: '9696'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - octavia-api
+    port: '9876'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - memcached
+    port: '11211'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - rabbitmq
+    port: '15672'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.6
+    - 192.168.16.7
+    components:
+    - nova-compute-kvm
+    port: '16509'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.2
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - keystone-api
+    port: '35357'
+    protocol: tcp
+-   addresses:
+    - 192.168.16.6
+    - 192.168.16.7
+    components:
+    - nova-compute-kvm
+    port: 49152:49215
+    protocol: tcp
+-   addresses:
+    - 192.168.16.5
+    - 192.168.16.4
+    - 192.168.16.3
+    components:
+    - rabbitmq
+    port: '61000'
+    protocol: tcp
