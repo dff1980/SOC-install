@@ -21,5 +21,7 @@ ansible-playbook -i hosts/localhost config-processor-run.yml -e remove_deleted_s
 
 
 openstack endpoint create --region region1 object-store internal http://192.168.15.24:80/swift/v1
+
 openstack endpoint create --region region1 object-store admin http://192.168.15.24:80/swift/v1
+
 openstack endpoint create --region region1 object-store public http://192.168.15.24:80/swift/v1
